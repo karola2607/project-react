@@ -8,18 +8,19 @@ class Column extends React.Component {
     animals: PropTypes.string,
   	plants: PropTypes.string,
   	minerals: PropTypes.string,
+}
+	
+  render() {
+    return (
+      <section className={styles.component}>
+        <h3 className={styles.title}>
+    	  {this.props.animals}
+    	  {this.props.plants}
+    	  {this.props.minerals}
+    	</h3>
+      </section>
+    )
   }
-	render() {
-      return (
-        <section className={styles.component}>
-    	  <h3 className={styles.title}>
-    	    {this.props.animals}
-    		{this.props.plants}
-    		{this.props.minerals}
-    	  </h3>
-        </section>
-    	)
-	}
 }
 
 export default Column;

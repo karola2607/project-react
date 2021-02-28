@@ -9,10 +9,10 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
   	image: PropTypes.string,
   	children: PropTypes.node,
-  }
+}
   static defaultProps = {
   	children: <p>I can do all the things!!!</p>,
-  }
+}
   render() {
     return (
       <section className={styles.component}>
