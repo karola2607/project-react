@@ -3,15 +3,21 @@ import React from 'react';
 import Hero from "../Hero/Hero.js";
 import PropTypes from 'prop-types';
 import Column from "../Column/Column.js";
+import {settings} from '../../data/dataStore.js';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
+  state = {
+  	columns: this.props.columns || [],
+  }
   static propTypes = {
     title: PropTypes.node.isRequired,
   	image: PropTypes.string,
-  	children: PropTypes.node,
+  	description: PropTypes.node,
+	columns: PropTypes.array,
 }
   static defaultProps = {
-  	children: <p>I can do all the things!!!</p>,
+  	description: settings.defaultListDescription,
 }
   render() {
     return (
@@ -21,12 +27,12 @@ class List extends React.Component {
   		  imageImg={this.props.image} 
   	     />
   		<div className={styles.description}>
-  		  {this.props.children}
+  		  {ReactHtmlParser(this.props.description)}
 	  	</div>
 	    <div className={styles.columns}>
-	      <Column animals='Animals'/>
-	      <Column plants='Plants'/>
-	      <Column minerals='Minerals'/>
+	      {this.state.columns.map(({key, ...columnProps}) => (
+          <Column key={key} {...columnProps} />
+        ))}
 	    </div>
       </section>
     )
