@@ -5,19 +5,19 @@ import PropTypes from 'prop-types';
 
 class Column extends React.Component {
   static propTypes = {
-  	animals: PropTypes.string,
+    animals: PropTypes.string,
   	plants: PropTypes.string,
   	minerals: PropTypes.string,
   }
 	render() {
-    	return (
-    		<section className={styles.component}>
-    			<h3 className={styles.title}>
-    			  {this.props.animals}
-    			  {this.props.plants}
-    			  {this.props.minerals}
-    			</h3>
-    		</section>
+      return (
+        <section className={styles.component}>
+    	  <h3 className={styles.title}>
+    	    {this.props.animals}
+    		{this.props.plants}
+    		{this.props.minerals}
+    	  </h3>
+        </section>
     	)
 	}
 }

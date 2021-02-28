@@ -6,7 +6,7 @@ import Column from "../Column/Column.js";
 
 class List extends React.Component {
   static propTypes = {
-  	title: PropTypes.node.isRequired,
+    title: PropTypes.node.isRequired,
   	image: PropTypes.string,
   	children: PropTypes.node,
   }
@@ -17,16 +17,16 @@ class List extends React.Component {
     return (
       <section className={styles.component}>
   		<Hero 
-  			titleText={this.props.title} 
-  			imageImg={this.props.image} 
+  		  titleText={this.props.title} 
+  		  imageImg={this.props.image} 
   	     />
   		<div className={styles.description}>
-  			{this.props.children}
+  		  {this.props.children}
 	  	</div>
 	    <div className={styles.columns}>
-	    	<Column animals='Animals'/>
-	    	<Column plants='Plants'/>
-	    	<Column minerals='Minerals'/>
+	      <Column animals='Animals'/>
+	      <Column plants='Plants'/>
+	      <Column minerals='Minerals'/>
 	    </div>
       </section>
     )

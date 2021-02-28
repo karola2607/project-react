@@ -7,14 +7,14 @@ class App extends React.Component {
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>
-        	My first React app
+          My first React app
         </h1>
   		<h2 className={styles.subtitle}>
-  			Hello world!
+  		  Hello world!
   		</h2>
   		<List 
-  			title={['Things to do ', <sup key='1'>soon!</sup>]} 
-  			image= "https://i.postimg.cc/ZRCPy6Tm/space.png"
+  		  title={['Things to do ', <sup key='1'>soon!</sup>]} 
+  		  image= "https://i.postimg.cc/ZRCPy6Tm/space.png"
   		/>
       </main>
     )
