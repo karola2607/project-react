@@ -15,6 +15,7 @@ class List extends React.Component {
   	image: PropTypes.string,
   	description: PropTypes.node,
 	columns: PropTypes.array,
+	name: PropTypes.string,
 }
   static defaultProps = {
   	description: settings.defaultListDescription,
@@ -30,9 +31,10 @@ class List extends React.Component {
   		  {ReactHtmlParser(this.props.description)}
 	  	</div>
 	    <div className={styles.columns}>
-	      {this.state.columns.map(({key, ...columnProps}) => (
-          <Column key={key} {...columnProps} />
+	      {this.state.columns.map(({key, title, ...columnProps}) => (
+          <Column key={key} name= {title} {...columnProps}  />
         ))}
+          
 	    </div>
       </section>
     )
