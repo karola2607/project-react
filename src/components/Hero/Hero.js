@@ -9,12 +9,12 @@ const Hero = props => (
   	  {ReactHtmlParser(props.titleText)}
   	</h2>
   	<img 
-  	  className={styles.image} 
-  	  src={props.imageImg} 
-  	  alt="cosmos" 
-  	/>
+      className={styles.image} 
+      src={props.imageImg} 
+      alt="cosmos" 
+    />
   </header>
-  );
+);
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,

@@ -6,14 +6,14 @@ class Card extends React.Component {
   static propTypes = {
     cards: PropTypes.array,
     subtitle: PropTypes.string,
-}
+  }
 	
   render() {
     return (
       <section className={styles.component}>
         {this.props.subtitle}
       </section>
-    )
+    );
   }
 }
 
