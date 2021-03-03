@@ -10,7 +10,7 @@ const Hero = props => (
   	</h2>
   	<img 
       className={styles.image} 
-      src={props.imageImg} 
+      src={props.image} 
       alt="cosmos" 
     />
   </header>
@@ -18,7 +18,7 @@ const Hero = props => (
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
-  imageImg: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Hero;

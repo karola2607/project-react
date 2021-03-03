@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 
 class Card extends React.Component {
   static propTypes = {
-    cards: PropTypes.array,
-    subtitle: PropTypes.string,
+    title: PropTypes.string,
   }
 	
   render() {
     return (
       <section className={styles.component}>
-        {this.props.subtitle}
+        {this.props.title}
       </section>
     );
   }
