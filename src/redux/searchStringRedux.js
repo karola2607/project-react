@@ -1,5 +1,3 @@
-import shortid from 'shortid';
-
 // selectors
 export const getSearchString = ({searchString}) => searchString;
 
@@ -12,14 +10,16 @@ const reducerName = 'searchString';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 // actions types
-export const ADD_SEARCH = createActionName('ADD_SEARCH');
+export const CHANGE_SEARCHSTRING = createActionName('CHANGE_SEARCHSTRING');
 
 // action creators
-export const createActionAddSearch = payload => ({ payload: { ...payload, id: shortid.generate() }, type: ADD_SEARCH });
+export const createAction_changeSearchString = payload => ({ payload , type: CHANGE_SEARCHSTRING });
 
 // reducer
-export default function reducer(statePart = '', action = {}) {
+export default function reducer(statePart = '', action) {
   switch (action.type) {
+    case CHANGE_SEARCHSTRING:
+      return action.payload;
     default:
       return statePart;
   }
