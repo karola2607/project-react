@@ -11,7 +11,7 @@ const Hero = props => (
   	<img 
       className={styles.image} 
       src={props.image} 
-      alt="cosmos" 
+      alt="image" 
     />
   </header>
 );

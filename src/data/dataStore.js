@@ -12,6 +12,7 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  defaultHeaderIcon: 'user-astronaut',
 };
 
 export const pageContents = {
@@ -140,6 +141,22 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+
+export const infoData = {
+  title: 'INFO',
+  subtitle: 'Let me introduce myself...',
+  image: 'https://i.postimg.cc/7PJDLq3n/pexels-nicole-avagliano-2706654-1.jpg',
+  imageTitle: 'About me',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+};
+
+export const FAQData = {
+  title: 'FAQ',
+  subtitle: 'What do you want to know?',
+  image: 'https://i.postimg.cc/VvYSm23t/pexels-fabio-marciano-2565420.jpg',
+  imageTitle: 'Find the answer!',
+  content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+};
 
 const initialStoreData = {
   app: {...pageContents},
