@@ -5,7 +5,7 @@ import Creator from '../Creator/Creator.js';
 import Card from '../Card/Card.js';
 import Icon from '../Icon/Icon.js';
 import {settings} from '../../data/dataStore.js';
-import Container from '../Container/Container';
+import Container from '../Container/Container.js';
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -33,7 +33,7 @@ class SearchResults extends React.Component {
           </h3>
           <div className={styles.columns}>
 	          {cards.map (cardData => (
-              <Card key={cardData.id} {...cardData}/>
+              <Card key={cardData.title} {...cardData}/>
             ))}
 	        </div>
 	        <div className={styles.creator}>

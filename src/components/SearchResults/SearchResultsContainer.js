@@ -3,13 +3,20 @@ import SearchResults from './SearchResults';
 import {getResultsOfCards} from '../../redux/cardsRedux.js';
 import {createActionAddCard} from '../../redux/cardsRedux.js';
 
-const mapStateToProps = (state, props) => ({
-  cards: getResultsOfCards(state, props.id, state.searchString),
-});
+const mapStateToProps = (state, props) => {
+  const title = props.match.params.title;
+  const filteredLists = state.lists.filter(list => list.title == title);
+  const listParams = filteredLists[0] || {};
+
+  return {
+    ...listParams,
+    cards: getResultsOfCards(state, title),
+  };
+};
 
 const mapDispatchToProps = (dispatch, props) => ({
   addCard: title => dispatch(createActionAddCard({
-    columnId: props.id,
+    columnId: props.match.params.title,
     title,
   })),
 });
