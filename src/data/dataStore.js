@@ -80,6 +80,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to learn <sup>soon!</sup>',
+    description: 'Everything I want to know!',
+    image: 'https://i.postimg.cc/T1XqfQ6b/32042.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Things to explore <sup>soon!</sup>',
+    description: 'Travel!',
+    image: 'https://i.postimg.cc/LXgNHngc/31633.jpg',
+  },
 ];
 
 const columns = [
