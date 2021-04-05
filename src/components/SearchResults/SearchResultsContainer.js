@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import SearchResults from './SearchResults';
 import {getResultsOfCards} from '../../redux/cardsRedux.js';
 import {createActionAddCard} from '../../redux/cardsRedux.js';
+import  {createAction_changeSearchString} from '../../redux/searchStringRedux';
 
 const mapStateToProps = (state, props) => {
   const title = props.match.params.title;
@@ -10,7 +11,7 @@ const mapStateToProps = (state, props) => {
 
   return {
     ...listParams,
-    cards: getResultsOfCards(state, title),
+    cards: getResultsOfCards(state),
   };
 };
 
@@ -19,6 +20,8 @@ const mapDispatchToProps = (dispatch, props) => ({
     columnId: props.match.params.title,
     title,
   })),
+  changeSearchString: newSearchString => dispatch(createAction_changeSearchString(newSearchString)),
 });
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
